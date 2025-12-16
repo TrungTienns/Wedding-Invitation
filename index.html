@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/7b12bcc245.js" crossorigin="anonymous"></script>
+  <title>Engagement Invitation</title>
+</head>
+
+<body>
+  <!-- Language Modal -->
+  <div id="language-modal" class="modal">
+    <div class="modal-content">
+      <h2>Welcome • Xin chào</h2>
+      <div class="language-buttons">
+        <button onclick="selectLanguage('en')">Continue in English</button>
+        <button onclick="selectLanguage('vi')">Tiếp tục bằng Tiếng Việt</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <input type="checkbox" id="check" />
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">P & N</label>
+
+    <ul class="text">
+      <li><a href="#story" onclick="myFunction()" data-translate="ourStory">OUR STORY</a></li>
+      <li><button class="lang-switch" onclick="switchLanguage()">EN</button></li>
+    </ul>
+
+    <!-- Music Button -->
+    <button id="music-toggle" class="music-btn" aria-label="Toggle music">
+      <i class="fas fa-music"></i>
+    </button>
+  </nav>
+
+  <!-- Home -->
+  <div class="home hz-margin">
+    <h3 data-translate="gettingMarried">We're getting engaged</h3>
+    <h1>Phương & Ngọc</h1>
+
+    <div class="container-out">
+      <div class="container-in text">
+        <span data-translate="location">
+          Saturday, Feb. 22, 2025 <br />
+          Long Thanh, Dong Nai
+        </span>
+      </div>
+      <div class="home-img" id="home-img-lg"></div>
+    </div>
+  </div>
+
+  <div class="home-img home-img-sm"></div>
+
+  <!-- Timeline -->
+  <div class="timeline hz-margin reveal">
+    <h2>
+      <span data-translate="celebratingLove">Celebrating Our Love</span><br />
+      <span data-translate="withThoseLove">With Those We Love</span>
+    </h2>
+
+    <div class="timeline-container">
+      <div class="timeline-img"></div>
+      <div class="timings">
+        <h3>01.&nbsp;&nbsp;<span data-translate="engagement">Engagement Ceremony</span></h3>
+        <div class="text" data-translate="engagementTime"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Story -->
+  <div class="v-reposition-container">
+    <div class="h-reposition-container">
+      <div id="story" class="hz-margin">
+        <h3 class="reveal story-title" data-translate="story"></h3>
+        <p class="text reveal story-text" data-translate="storyText"></p>
+      </div>
+
+      <!-- Gallery -->
+      <div class="gallery hz-margin reveal">
+        <div class="gallery-img"></div>
+        <div class="gallery-img"></div>
+        <div class="gallery-img"></div>
+      </div>
+
+      <!-- Quote -->
+      <div class="quote reveal">
+        <h1 data-translate="quote"></h1>
+      </div>
+
+      <div class="hands" id="parallax1"></div>
+
+      <!-- Registry / Thank you -->
+      <div id="registry">
+        <div class="registry-container reveal">
+          <div class="parting-message reveal">
+            <h1 data-translate="hopeSeeYou"></h1>
+            <p class="parting-text" data-translate="thanksText"></p>
+          </div>
+        </div>
+
+        <div class="registry-img registry-img-lg" id="parallax2"></div>
+      </div>
+
+      <div class="registry-img registry-img-sm"></div>
+    </div>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="assets/music/music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="main.js"></script>
+</body>
+</html>
