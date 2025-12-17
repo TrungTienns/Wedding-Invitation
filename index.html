@@ -6,11 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/7b12bcc245.js" crossorigin="anonymous"></script>
-  <title>Engagement Invitation</title>
+  <title>Engagement Invitation | Phương & Ngọc</title>
 </head>
 
 <body>
-  <!-- Language Modal -->
   <div id="language-modal" class="modal">
     <div class="modal-content">
       <h2>Welcome • Xin chào</h2>
@@ -21,26 +20,30 @@
     </div>
   </div>
 
-  <!-- Navigation -->
   <nav>
     <input type="checkbox" id="check" />
     <label for="check" class="checkbtn">
       <i class="fas fa-bars"></i>
     </label>
+
     <label class="logo">P & N</label>
 
     <ul class="text">
-      <li><a href="#story" onclick="myFunction()" data-translate="ourStory">OUR STORY</a></li>
-      <li><button class="lang-switch" onclick="switchLanguage()">EN</button></li>
+      <li>
+        <a href="#story" onclick="myFunction()" data-translate="ourStory">
+          OUR STORY
+        </a>
+      </li>
+      <li>
+        <button class="lang-switch" onclick="switchLanguage()">EN</button>
+      </li>
     </ul>
 
-    <!-- Music Button -->
-    <button id="music-toggle" class="music-btn" aria-label="Toggle music">
+    <button id="music-toggle" class="music-btn">
       <i class="fas fa-music"></i>
     </button>
   </nav>
 
-  <!-- Home -->
   <div class="home hz-margin">
     <h3 data-translate="gettingMarried">We're getting engaged</h3>
     <h1>Phương & Ngọc</h1>
@@ -48,7 +51,7 @@
     <div class="container-out">
       <div class="container-in text">
         <span data-translate="location">
-          Saturday, Feb. 22, 2025 <br />
+          Sunday, Dec. 21, 2025 <br />
           Long Thanh, Dong Nai
         </span>
       </div>
@@ -58,7 +61,6 @@
 
   <div class="home-img home-img-sm"></div>
 
-  <!-- Timeline -->
   <div class="timeline hz-margin reveal">
     <h2>
       <span data-translate="celebratingLove">Celebrating Our Love</span><br />
@@ -68,13 +70,45 @@
     <div class="timeline-container">
       <div class="timeline-img"></div>
       <div class="timings">
-        <h3>01.&nbsp;&nbsp;<span data-translate="engagement">Engagement Ceremony</span></h3>
+        <h3>
+          01.&nbsp;&nbsp;
+          <span data-translate="engagement">Engagement Ceremony</span>
+        </h3>
         <div class="text" data-translate="engagementTime"></div>
       </div>
     </div>
   </div>
 
-  <!-- Story -->
+  <section class="countdown-section hz-margin reveal">
+    <div class="countdown-bg"></div>
+
+    <h2 data-translate="countdownTitle">
+      Counting Down to Our Special Day
+    </h2>
+
+    <div class="countdown glass">
+      <div class="time-box">
+        <span id="days">00</span>
+        <small data-translate="days">Days</small>
+      </div>
+      <div class="time-box">
+        <span id="hours">00</span>
+        <small data-translate="hours">Hours</small>
+      </div>
+      <div class="time-box">
+        <span id="minutes">00</span>
+        <small data-translate="minutes">Minutes</small>
+      </div>
+      <div class="time-box">
+        <span id="seconds">00</span>
+        <small data-translate="seconds">Seconds</small>
+      </div>
+    </div>
+    
+    <canvas id="fireworks-left" class="fireworks-canvas"></canvas>
+    <canvas id="fireworks-right" class="fireworks-canvas"></canvas>
+  </section>
+
   <div class="v-reposition-container">
     <div class="h-reposition-container">
       <div id="story" class="hz-margin">
@@ -82,21 +116,45 @@
         <p class="text reveal story-text" data-translate="storyText"></p>
       </div>
 
-      <!-- Gallery -->
       <div class="gallery hz-margin reveal">
         <div class="gallery-img"></div>
         <div class="gallery-img"></div>
         <div class="gallery-img"></div>
       </div>
+      <div id="love-letter" class="hz-margin reveal">
+    <h2 data-translate="letterTitle">Words from the Heart</h2>
+    
+    <div class="letter-container">
+      <div class="letter-tabs">
+        <button class="tab-btn active" onclick="openTab(event, 'groom-letter')">
+          <i class="fas fa-feather-alt"></i> &nbsp;<span data-translate="fromGroom">From Phuong</span>
+        </button>
+        <button class="tab-btn" onclick="openTab(event, 'bride-letter')">
+          <i class="fas fa-heart"></i> &nbsp;<span data-translate="fromBride">From Ngoc</span>
+        </button>
+      </div>
 
-      <!-- Quote -->
+      <div id="groom-letter" class="letter-content active-content">
+        <h3 data-translate="groomHeading">To My Beloved Ngoc,</h3>
+        <p class="text" data-translate="groomMsg">
+          </p>
+        <div class="signature">Phuong</div>
+      </div>
+
+      <div id="bride-letter" class="letter-content">
+        <h3 data-translate="brideHeading">To My Dearest Phuong,</h3>
+        <p class="text" data-translate="brideMsg">
+          </p>
+        <div class="signature">Ngoc</div>
+      </div>
+    </div>
+  </div>
       <div class="quote reveal">
         <h1 data-translate="quote"></h1>
       </div>
 
       <div class="hands" id="parallax1"></div>
 
-      <!-- Registry / Thank you -->
       <div id="registry">
         <div class="registry-container reveal">
           <div class="parting-message reveal">
@@ -112,7 +170,6 @@
     </div>
   </div>
 
-  <!-- Background Music -->
   <audio id="bg-music" loop>
     <source src="assets/music/music.mp3" type="audio/mpeg" />
   </audio>
